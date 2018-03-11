@@ -1,0 +1,68 @@
+-------------------
+	# STRUCTURI DE DATE
+	# Tema 1 
+	# Gagea Elena-Miruna
+	# 314CC
+-------------------
+	Problema este structurata in 4 Task-uri. Pentru fiecare task am folosit una sau mai multe functii, dupa cum urmeaza:
+
+	--> TASK 1
+	     --> FSCS (FILE *f, FILE *fo)
+	     * Deschidem fisierul
+	     * Citim pe rand comenzile date.
+	     * Pentru fiecare comanda avem cate o functie:
+		-tick(running,ready);
+			*delReady(ready)-returneaza elementul sters dintr-o coada
+		-add(running,ready);
+		*pentru multiple add apenal tot functia add*
+		-wait(running, waiting);
+		-event(waiting, ready, proc name);
+		-show(running, fout);
+
+	--> TASK 2
+		--> SJF(FILE *f, FILE *fo)
+		 * Deschidem fisierul
+	     * Citim pe rand comenzile date.
+	     * Pentru fiecare comanda avem cate o functie:
+		-tickSJF(running,ready); 
+			*SerchForMin(ready)-cauta procesul cu timpul cel mai scurt
+			*delReady(ready)-returneaza elementul sters dintr-o coada
+		-add(running,ready);
+		*pentru multiple add apenal tot functia add*
+		-wait(running, waiting);
+		-event(waiting, ready, proc name);
+		-show(running, fout);
+
+	--> TASK 3
+		 
+	--> RR(FILE *f, FILE *fo)
+		 * Deschidem fisierul
+	     * Citim pe rand comenzile date.
+	     * Pentru fiecare comanda avem cate o functie:
+		-tickRR(running,ready); 
+			*delReady(ready)-returneaza elementul sters dintr-o coada
+		-add(running,ready);
+		*pentru multiple add apenal tot functia add*
+		-wait(running, waiting);
+		-event(waiting, ready, proc name);
+		-show(running, fout);
+
+	--> TASK 4
+		--> PP(FILE *f, FILE *fo)
+		 * Deschidem fisierul
+	     * Citim pe rand comenzile date.
+	     * Pentru fiecare comanda avem cate o functie:
+		-tickPP(running,ready); 
+			*SearchForMaxPrio(ready)-cauta procesul cu prioritatea cea mai mare
+			*delReady(ready)-returneaza elementul sters dintr-o coada
+		-add(running,ready);
+		*pentru multiple add apenal tot functia add*
+		-wait(running, waiting);
+		-event(waiting, ready, proc name);
+		-show(running, fout);
+
+	Functiile add, show, wait si event sunt aceeleasi pentru toata cele patru taskuri:
+	add: adauga procesele in ready;
+	wait: trece procesul din starea run in starea waiting;
+	event: trece procesul din starea waiting in starea ready;
+	show: afiseaza procesul din running;
